@@ -13,46 +13,45 @@ import me.gosimple.nbvcxz.matching.PasswordMatcher;
  *
  * @author Adam Brusselback
  */
-public interface Match
-{
-    /**
-     * @return the {@code String} value of the {@code Match}.
-     */
-    String getToken();
+public interface Match {
+  /**
+   * @return the {@code String} value of the {@code Match}.
+   */
+  String getToken();
 
-    /**
-     * Calculate the entropy for the current match
-     *
-     * @return a {@code double} representing the entropy of the current {@code Match}.
-     */
-    double calculateEntropy();
+  /**
+   * Calculate the entropy for the current match
+   *
+   * @return a {@code double} representing the entropy of the current {@code Match}.
+   */
+  double calculateEntropy();
 
-    /**
-     * Returns the start index of this part of the password
-     *
-     * @return the {@code int} start index of this {@code Match}.
-     */
-    int getStartIndex();
+  /**
+   * Returns the start index of this part of the password
+   *
+   * @return the {@code int} start index of this {@code Match}.
+   */
+  int getStartIndex();
 
-    /**
-     * Returns the end index of this part of the password
-     *
-     * @return the {@code int} end index of this {@code Match}.
-     */
-    int getEndIndex();
+  /**
+   * Returns the end index of this part of the password
+   *
+   * @return the {@code int} end index of this {@code Match}.
+   */
+  int getEndIndex();
 
-    /**
-     * Returns the length of this part of the password
-     *
-     * @return the {@code int} length of this {@code Match}.
-     */
-    int getLength();
+  /**
+   * Returns the length of this part of the password
+   *
+   * @return the {@code int} length of this {@code Match}.
+   */
+  int getLength();
 
-    /**
-     * Returns details about this match in the form of a String to be printed directly
-     *
-     * @return all specific details about this {@code Match} in printable String format.
-     */
-    String getDetails();
+  /**
+   * Returns details about this match in the form of a String to be printed directly
+   *
+   * @return all specific details about this {@code Match} in printable String format.
+   */
+  String getDetails();
 
 }

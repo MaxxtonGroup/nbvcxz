@@ -9,11 +9,11 @@ import me.gosimple.nbvcxz.matching.match.Match;
 
 /**
  * Wrapper for the best matches list and length to support recursive methods
- * 
+ *
  * @author Robin Hermans
  */
 public class BestMatches {
-  
+
   private int best_match_length;
   private List<Match> best_matches;
 

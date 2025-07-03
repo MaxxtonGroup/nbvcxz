@@ -14,20 +14,17 @@ import java.util.regex.Pattern;
  *
  * @author Adam Brusselback
  */
-public final class YearMatcher implements PasswordMatcher
-{
-    public List<Match> match(final Configuration configuration, final String password)
-    {
-        Pattern pattern = configuration.getYearPattern();
-        Matcher matcher = pattern.matcher(password);
+public final class YearMatcher implements PasswordMatcher {
+  public List<Match> match(final Configuration configuration, final String password) {
+    Pattern pattern = configuration.getYearPattern();
+    Matcher matcher = pattern.matcher(password);
 
-        List<Match> matches = new ArrayList<>();
+    List<Match> matches = new ArrayList<>();
 
-        while (matcher.find())
-        {
-            matches.add(new YearMatch(matcher.group(), configuration, matcher.start(), matcher.end() - 1));
-        }
-
-        return matches;
+    while (matcher.find()) {
+      matches.add(new YearMatch(matcher.group(), configuration, matcher.start(), matcher.end() - 1));
     }
+
+    return matches;
+  }
 }
